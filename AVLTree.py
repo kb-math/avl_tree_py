@@ -60,6 +60,7 @@ class AVLTReeNode(object):
         curr_node = self.left
         if curr_node.right is None:
             curr_node.right = self.right
+            update_count(curr_node)
             return curr_node._balance()
 
         visited_nodes = []
@@ -73,15 +74,12 @@ class AVLTReeNode(object):
         while len(visited_nodes) > 0:
             node = visited_nodes.pop()
             node.right = child
+            update_count(node)
             child = node._balance()
 
         self.left = child
-        new_root = self._balance()
-        
-        #TODO: Do this now???
-        #new_root.count -= 1
-
-        return new_root
+        update_count(self)
+        return self._balance()
 
     def delete(self, key):
         if self.key == key:
