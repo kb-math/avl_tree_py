@@ -4,7 +4,7 @@ class AVLTree(object):
     def __init__(self, root = None):
         self.root = root
 
-    def insert(self, node):
+    def insert_node(self, node):
         if self.root is None:
             self.root = node
             return
@@ -25,7 +25,7 @@ class AVLTree(object):
         return self.root.to_sorted_array()
 
     def insert_key(self, key):
-        self.insert(AVLTReeNode(key))
+        self.insert_node(AVLTReeNode(key))
 
     def count_less(self, upper):
         if self.root is None:
