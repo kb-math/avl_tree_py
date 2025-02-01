@@ -56,6 +56,16 @@ def test_count(node_keys_arr = [0,1,2,3,4,5]):
                 next_nodes_to_visit.append(node.right)
         nodes_to_visit = next_nodes_to_visit
 
+def test_count_less(node_keys_arr = [0,1,2,3,4,5]):
+    tree = AVLTree()
+    for key in node_keys_arr:
+        tree.insert_key(key)
+    
+    keys_sorted = sorted(set(node_keys_arr))
+
+    for i in range(len(keys_sorted)):
+        assert(tree.count_less(keys_sorted[i]) == i)
+
 def calc_tree_height(node):
     if node is None:
         return 0
