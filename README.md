@@ -7,6 +7,7 @@ Implements an [AVL tree](https://en.wikipedia.org/wiki/AVL_tree) in python. The 
 |Insert           |O(n)          | O(1)     | O(log(n))|
 |Delete           |O(n)          | O(1)     | O(log(n))|
 |Count less than x|O(log(n))     | O(n)     | O(log(n))|
+|Get smallest larger than x| O(log(n)) | O(n) |O(log(n))|
 
 Here is an example that is quite self-explanatory:
 
