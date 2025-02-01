@@ -1,6 +1,12 @@
 # avl_tree_py
 
-Implements an AVL tree in python. The advantage of this data structure is that insertion, deletion and counting how many elements are less than x are all O(log(n)) thus efficient. Note that for a hash map insertion and deletion is O(1) but counting how many elements are less than x is much slower, i.e., O(n).
+Implements an [AVL tree](https://en.wikipedia.org/wiki/AVL_tree) in python. The advantage of this data structure is that insertion, deletion and counting how many elements are less than x are all O(log(n)) thus efficient. Note that for a hash map insertion and deletion is O(1) but counting how many elements are less than x is much slower, i.e., O(n).
+
+|                 | Sorted Array | Hash-map | AVL tree |
+|-----------------|--------------|----------|----------|
+|Insert           |O(n)          | O(1)     | O(log(n))|
+|Delete           |O(n)          | O(1)     | O(log(n))|
+|Count less than x|O(log(n))     | O(n)     | O(log(n))|
 
 Here is an example that is quite self-explanatory:
 
