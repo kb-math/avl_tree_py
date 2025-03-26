@@ -36,4 +36,4 @@ Here is an example that is quite self-explanatory:
 3
 ```
 
-To clarify, `tree.count_less(6)` gives `3` above because there are three numbers (`1`,`2` and `5`) that are less than `3`. This method has complexity O(log(n)).
+To clarify, `tree.count_less(6)` gives `3` above because there are three numbers (`1`,`2` and `5`) that are less than `6`. This method has complexity O(log(n)).
